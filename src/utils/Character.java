@@ -38,7 +38,10 @@ public class Character {
 		this.formations = formations;
 	}
 	
-	
+
+    public void takeDammage(int dammage) {
+	this.hp -= this.hp - dammage;
+    }
 	
 
 }
