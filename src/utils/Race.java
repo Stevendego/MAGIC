@@ -3,7 +3,7 @@ import java.util.Random;
 
 public class Race {
 
-	public String name;
+	private String name;
 	
 	// Physical
 	private Pair<Integer,Integer> size;
