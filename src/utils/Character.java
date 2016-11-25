@@ -8,6 +8,7 @@ public class Character {
 	// 1. Basic informations
 	private int level;
 	private int px;
+	private int hp;
 	
 	private final Race race;
 	private final Class cl;
