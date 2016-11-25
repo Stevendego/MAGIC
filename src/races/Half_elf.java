@@ -8,14 +8,20 @@ import characteristics.*;
 
 public class Half_elf extends Race {
 
-	public Half_elf(Pair<Integer, Integer> size, Pair<Integer, Integer> weight, 
+	private static Characteristic c[] = {new Constitution((Integer)2), new Charisma((Integer)(2))};
+	
+	private Half_elf(Pair<Integer, Integer> size, Pair<Integer, Integer> weight, 
 			Language[] langs, boolean vision) {
 		
-		super(size, weight, langs, vision);
+		super("Half elf", size, weight, c, langs, vision);
 
-		Characteristic c[] = {new Constitution((Integer)2), new Charisma((Integer)(2))};
-		this.name = "Half elf";
-		this.bonuses = c;
 		}
+	
+	private static final Half_elf instance = /* TODO : replace with good values */
+			new Half_elf(new Pair<Integer,Integer>(150,170),new Pair<Integer,Integer>(70,90),new Language[0],true);
+
+	public static Half_elf getInstance(){
+		return instance;
+	}
 	
 }

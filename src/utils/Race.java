@@ -3,24 +3,28 @@ import java.util.Random;
 
 public class Race {
 
-	private String name;
+	private final String name;
 	
 	// Physical
-	private Pair<Integer,Integer> size;
-	private Pair<Integer,Integer> weight;
+	private final Pair<Integer,Integer> size;
+	private final Pair<Integer,Integer> weight;
 	
 	// Bonuses
-	protected Characteristic[] bonuses;
-	private Language[] langs;
+	protected final Characteristic[] bonuses;
+	private final Language[] langs;
 	
 	// Misc.
-	private boolean vision; /* Vision in the dark */
+	private final boolean vision; /* Vision in the dark */
 
-	public Race(Pair<Integer, Integer> size, Pair<Integer, Integer> weight,
+
+
+	public Race(String name, Pair<Integer, Integer> size, Pair<Integer, Integer> weight, Characteristic[] bonuses,
 			Language[] langs, boolean vision) {
 		super();
+		this.name = name;
 		this.size = size;
 		this.weight = weight;
+		this.bonuses = bonuses;
 		this.langs = langs;
 		this.vision = vision;
 	}
