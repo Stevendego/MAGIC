@@ -2,14 +2,17 @@ package utils;
 
 public abstract class Characteristic implements Comparable<Characteristic>{
 	
-	private Integer id;
+	private final Integer id;
 	
-	public String char_name;
-	public int value;
+	private final String char_name;
+	private int value;
 	
-	public Characteristic(Integer v){
-		value = v;
+	protected Characteristic(Integer id, String char_name, Integer value){
+		this.id = id;
+		this.char_name = char_name;
+		this.value = value;
 	}
+	
 	@Override
 	public int compareTo(Characteristic arg0) {
 		return this.id.compareTo(arg0.id);
