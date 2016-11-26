@@ -21,10 +21,11 @@ public class Character {
 	private int weight;
 	
 	// 3. Characteristics. 
-	private HashSet<Characteristic> characteristics; 
+	private Characteristics_set characteristics; 
 	private HashSet<Skill> formations;
+	
 	public Character(String name, Race race, Class cl, String gender, int size, int weight,
-			HashSet<Characteristic> characteristics, HashSet<Skill> formations) {
+			Characteristics_set characteristics, HashSet<Skill> formations) {
 		this.name = name;
 		
 		this.level = 1;

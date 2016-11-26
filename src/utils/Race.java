@@ -55,15 +55,17 @@ public class Race {
 	
 	// 2. Race creator
 	
-	public Integer chooseBetweenPair(Integer i1, Integer i2){
+	public static Integer chooseBetweenPair(Integer i1, Integer i2){
 		return (i1 + (new Random()).nextInt(i2 - i1));
 		
 	}
 	
+	/* Returns a size between the minimal and the maximal usual size of a race */
 	public Integer getGoodSize(){
 		return chooseBetweenPair(getSize().fst() , getSize().snd());
 	}
 	
+	/* Same for the weight */
 	public Integer getGoodWeight(){
 		return chooseBetweenPair(getWeight().fst() , getWeight().snd());
 
